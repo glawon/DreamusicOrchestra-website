@@ -10,9 +10,9 @@ const path = require('path');
 // db.on('error', (error) => console.error(error));
 // db.once('open', () => console.log('Connected to Database.'));
 
-// app.get("/api", (req, res) => {
-//   res.json({"users": ["userOne", "userTwo", "userThree"]}) //this is our backend api
-// })
+app.get("/api", (req, res) => {
+  res.json({message: ["userOne", "userTwo", "userThree"]}) //this is our backend api
+})
 
 // app.get('/', (req, res) => {
     //res.sendFile('./views/index.html', { root: __dirname});
@@ -24,8 +24,12 @@ const path = require('path');
 la regex dice che deve iniziare e finire con / oppure /home_page
 a sua volta /home_page(.html)? può avere facoltativamente l'estensione file
 */
+// app.get('^/$|/home_page(.html)?', (req, res) => { 
+//   res.sendFile(path.join(__dirname, 'views', 'home_page.html')); //qui devo mettere il path del file home in frontend presumo
+// })
+
 app.get('^/$|/home_page(.html)?', (req, res) => { 
-  res.sendFile(path.join(__dirname, 'views', 'home_page.html')); //qui devo mettere il path del file home in frontend presumo
+  res.sendFile('../client/src/App.js', { root: __dirname});
 })
 
 app.get('/box_office(.html)?', (req, res) => { 
