@@ -8,7 +8,7 @@ import BottomBar from './components/bottomBar';
 import React, {useEffect, useState} from 'react';
 
 function App() {
-  const [backendData, setBackendData] = React.useState(null)
+  const [backendData, setBackendData] = React.useState([])
 
   React.useEffect(() => {
     fetch("/api")
