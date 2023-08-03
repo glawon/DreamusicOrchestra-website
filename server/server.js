@@ -29,7 +29,7 @@ a sua volta /home_page(.html)? può avere facoltativamente l'estensione file
 // })
 
 app.get('^/$|/home_page(.html)?', (req, res) => { 
-  res.sendFile('../client/src/App.js', { root: __dirname});
+  res.sendFile(path.join(__dirname, 'views', 'home_page.html'));
 })
 
 app.get('/box_office(.html)?', (req, res) => { 
