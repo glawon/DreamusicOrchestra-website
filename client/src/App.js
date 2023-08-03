@@ -5,11 +5,22 @@ import NavBar from './components/NavBar';
 import Bio from './components/bio';
 import EventsBar from './components/eventsBar';
 import BottomBar from './components/bottomBar';
+import React, {useEffect, useState} from 'react';
 
 function App() {
+  const [backendData, setBackendData] = React.useState(null)
+
+  React.useEffect(() => {
+    fetch("/api")
+    .then( (response) => response.json())
+    .then( (data) => { setBackendData(data)})
+  }, []);
+
+
+
+
   return (
     //controllo dal back-end: loading fin quando non è arrivato tutto OPPURE progression nelle immagini degli eventi finché non arriva il messaggio
-
     <>
       <div className="page">
         <NavBar />
