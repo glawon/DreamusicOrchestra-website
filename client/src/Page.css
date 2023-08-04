@@ -1,0 +1,34 @@
+.page {
+  text-align: center;
+  background-color: black;
+}
+
+.nav-link{
+  color:#e3841f;
+}
+
+.text{
+  color:#e3841f;
+}
+
+.title{
+  color:#ffffff;
+}
+
+.header{
+  text-transform:capitalize;
+  color:white;
+}
+
+.divider{
+  border: 3px solid #e3841f;
+}
+
+.Event{
+  width:30rem;
+}
+
+.active-scroll-spy {
+  background-color: rgba(112, 114, 106,0.8);
+  border-radius: 15px;
+}
